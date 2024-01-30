@@ -4,7 +4,7 @@ const port = process.env.PORT || 5500;
 
 app.get('/', function (req, res) {
   
-    res.send('Hello World from Awesome-O. Awesome-O is type achiever, so Awesome-O can be too competitive sometimes. Awesome-O is nothing but "authentic", however.')
+    res.send('Hello World from Awesome-O. Awesome-O is type 7 (enthusiast), so Awesome-O can have a hard time focusing on one thing for too long; Awesome-O is usually optimistic and surprisingly creative, however.')
 })
 //app.listen(3000)
 
