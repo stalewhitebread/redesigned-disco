@@ -17,17 +17,13 @@ app.get('/', function(req, res) {
     myTypeClient: myTypeServer 
 
   });
-  
 });
-
 
 app.get('/send', function (req, res) {
   
     res.send('Hello World from Express <br><a href="/">home</a>')
 })
 
-// app.listen(3000)
-
 app.listen(port, () => {
-  console.log(`nov app listening on port ${port}`)
+  console.log(`the government listening on port ${port}`)
 })
