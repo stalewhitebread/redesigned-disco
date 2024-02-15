@@ -52,8 +52,8 @@ async function run() {
     .collection("papa-collection")
     .find()
     .toArray();
-    console.log("cxnDB Result: ", result);
-
+   // console.log("cxnDB Result: ", result);
+    return result;
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
@@ -61,3 +61,15 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+app.get('/read', async (req,res) =>{
+  let myResultServer=await run();
+  console.log("myResultServer",myResultServer);
+  res.render('index', {
+    myTypeClient: myTypeServer,
+    myResultClient: myResultServer 
+  })
+
+});
+
+
